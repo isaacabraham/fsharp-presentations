@@ -22,8 +22,9 @@ These operators are known from primary school math, no need to teach them explic
     [ … ]                Lists
     [| … |]              Arrays
     { A=1; B=2 }         Records
+    {| A=1; B=2 |}       Anonymous Records (getting more and more common, especially for exploratory use). Maybe this is more advanced though.
 
-    3 :: xs              Cons onto a list (note, you can use List.Cons(3, xs) instead. However :: is necessary when pattern matching on lists)
+    expr |> f            Pipelining
  
     | … ->               Rule in pattern matching
     _                    Wildcard in pattern matching
@@ -32,14 +33,14 @@ These operators are known from primary school math, no need to teach them explic
  
     n..m                 Ranges (within a list or sequence or loop)
 
+    thing <- expr        Mutation of local, field etc.
+
     expr : type          Type constraint (also for patterns)
     expr :? type         Type test (also in patterns) 
     expr :> type         Cast up
     expr :?> type        Cast down
 
-    expr |> f            Pipelining 
-
-    thing <- expr        Mutation of local, field etc.
+    3 :: xs              Cons onto a list (note, you can use List.Cons(3, xs) instead. However :: is necessary when pattern matching on lists)
 
     ``abc def``          Long identifier
 
